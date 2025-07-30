@@ -48,9 +48,9 @@
             height: 100%;
         }
         /* Logo styling */
-        .logo-img {
-            max-width: 100%; /* Ensure image is responsive */
-            height: auto;
+        .logo-svg {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
             filter: drop-shadow(0 4px 3px rgba(0,0,0,0.07)) drop-shadow(0 2px 2px rgba(0,0,0,0.06)); /* subtle shadow */
         }
     </style>
@@ -60,17 +60,40 @@
     <!-- Hero Section -->
     <section class="hero-gradient text-white text-center py-20 md:py-28 px-6 shadow-xl">
         <div class="container mx-auto max-w-4xl">
-            <!-- Logo -->
+            <!-- Logo Placeholder (Replace with your actual SVG logo code) -->
             <div class="mb-6">
-                <!-- IMPORTANT: Replace "logo.png" with the actual path to your logo image. -->
-                <!-- If you don't have a logo yet, consider using text or a simple SVG placeholder. -->
-                <img src="logo.png" alt="Nightshift Strong Logo" class="mx-auto h-48 w-auto logo-img">
+                <svg class="logo-svg mx-auto" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Truck Cab -->
+                    <rect x="20" y="40" width="80" height="50" rx="8" fill="#0F172A"/>
+                    <path d="M100 45L120 25L120 95L100 85V45Z" fill="#0F172A"/>
+                    <!-- Cab Window -->
+                    <rect x="45" y="50" width="35" height="25" rx="4" fill="#E0E6ED"/>
+
+                    <!-- Trailer (simplified) -->
+                    <rect x="120" y="45" width="100" height="40" rx="8" fill="#334155"/>
+
+                    <!-- Wheels -->
+                    <circle cx="50" cy="100" r="15" fill="#4B5563"/>
+                    <circle cx="90" cy="100" r="15" fill="#4B5563"/>
+                    <circle cx="140" cy="100" r="15" fill="#4B5563"/>
+                    <circle cx="180" cy="100" r="15" fill="#4B5563"/>
+                    <circle cx="210" cy="100" r="15" fill="#4B5563"/>
+
+                    <!-- Gas Pipes / Exhaust (simplified vertical lines) -->
+                    <rect x="105" y="30" width="5" height="30" fill="#4B5563" rx="2.5"/>
+                    <rect x="112" y="25" width="5" height="35" fill="#4B5563" rx="2.5"/>
+
+                    <!-- Zzz's coming from pipes -->
+                    <text x="100" y="25" font-family="Inter" font-size="18" fill="#FACC15" font-weight="bold">Z</text>
+                    <text x="110" y="18" font-family="Inter" font-size="18" fill="#FACC15" font-weight="bold">z</text>
+                    <text x="120" y="12" font-family="Inter" font-size="18" fill="#FACC15" font-weight="bold">z</text>
+                </svg>
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
                 Nightshift Strong: Conquer Sleep, Burnout & Energy Crashes
             </h1>
             <p class="text-xl md:text-2xl mb-8 opacity-90">
-                Dedicated 1-on-1 coaching for truck drivers and other night shift professionals. We go beyond just sleep, using evidence-based science and my expertise to holistically improve your life across all domains: existential, emotional, physical, social, mental, and environmental – fostering deep, whole-body health and lasting focus.
+                Dedicated 1-on-1 coaching for truck drivers and other night shift professionals to reclaim natural energy, deep sleep, and lasting focus.
             </p>
             <a href="#cta" class="inline-block bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg md:text-xl">
                 Start Your Transformation
@@ -89,7 +112,7 @@
                 Most night shift workers, especially truckers, nurses, and security staff, never get real, sustainable help for the unique challenges they face. You're constantly battling fatigue, struggling to sleep during the day, relying on endless caffeine, and feeling disconnected. You're tired, wired, and frustrated – and it impacts everything from your safety on the road to your relationships at home.
             </p>
             <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-                I've been there too. I understand the silent struggle of the night shift because I've lived it. And I've coached thousands through recovery, performance, and lifestyle resets that actually work for *your* schedule.
+                I've been there too. I understand the silent struggle of the night shift because I've lived it. And I've coached thousands through recovery, performance, and lifestyle resets that actually work for <span class="font-bold">your</span> schedule.
             </p>
         </div>
     </section>
@@ -102,48 +125,39 @@
         <div class="container mx-auto max-w-6xl text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-12">My Journey: From Wake-Up Call to Coaching Mission</h2>
 
-            <div class="flex flex-col lg:flex-col gap-10 items-start"> <!-- Changed lg:flex-row to lg:flex-col -->
-
-                <!-- My Story Card -->
-                <div class="w-full bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 text-left">
-                    <h3 class="text-2xl font-bold text-white mb-4">My Story: The Wake-Up Call</h3>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        Years ago, I was in a CDL training program, aspiring to become a truck driver like many of you. The relentless night shifts, even during training, and the constant fatigue eventually caught up to me.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        One terrifying night, while I was training with my instructor, I was in the truck's bed, exhausted and trying to rest. My trainer was driving, but I experienced a micro-sleep. I was seconds away from a catastrophic disaster. Out of nowhere, another trucker honked and flashed their lights, jolting me awake. Nothing happened, but it was a horrifying reminder of how dangerous sleep deprivation can be – not just for drivers, but for everyone on the road.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        The trucking industry often attributes sleep problems solely to physical issues like sleep apnea, leading to mandated CPAP use. However, I know firsthand that **lifestyle choices, lack of proper support, and the inherent challenges of night shift work** also negatively affect many truckers' sleep and overall well-being.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        <strong>That moment changed everything.</strong> It ignited my passion to help others avoid what I almost faced. My mission is clear: to ensure no one else faces the dangers of night shift fatigue, and that every night shift worker can live a full, healthy, and strong life.
-                    </p>
+            <!-- My Story Card -->
+            <div class="w-full bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 text-left mb-10">
+                <h3 class="text-2xl font-bold text-white mb-4">My Crazy Story: The Wake-Up Call</h3>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    Years ago, I was a new CDL driver, just like many of you, fresh into a training program. The relentless night shifts, the constant fatigue – it all caught up to me. One terrifying night, I was behind the wheel, my trainer asleep in the sleeper cab behind me. The exhaustion was overwhelming, and suddenly, I experienced a micro-sleep. Just for a few seconds, my brain shut down, no matter how much coffee I’d tried to drink. We didn't die that night, but the sheer terror of what almost occurred has never left me.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    Why didn't I get sleep while the truck was being loaded? Because of a tragic incident at a Walmart, where a forklift loading a truck crashed through the sleeper cab and killed someone. This led to a strict rule: no sleeping in the cab while loading. So, I had to stay awake, often dealing with dirty bathrooms, nothing to eat but vending machine junk, and the crushing pressure to keep going. It was a brutal reality that many night shift workers face.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    That moment changed everything. It ignited my passion to help others avoid what I almost faced. My mission is clear: to ensure no one else faces the dangers of night shift fatigue, and that every night shift worker can live a full, healthy, and <span class="font-bold">strong</span> life.
+                </p>
+                <div class="video-wrapper">
+                    <!-- Replace YOUR_VIDEO_ID with your actual YouTube video ID -->
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-
-                <!-- My Coaching Journey Card -->
-                <div class="w-full bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 text-left">
-                    <h3 class="text-2xl font-bold text-white mb-4">My Coaching Journey & Expertise</h3>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        My background as an <strong>addiction counselor at IOU University</strong>, where I provided group coaching for thousands, has given me deep insights into behavior change and personal transformation. I've also had the privilege of coaching <strong>many college students, middle-aged professional men and women</strong> through significant life improvements.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        My coaching is grounded in advanced, science-backed principles, including those learned directly from <strong>some of the world's leading sleep, stress, and burnout recovery doctors</strong> through the Precision Nutrition program and other coaching programs, courses, and resources I have paid for to become the best in the business.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                        My dedication to providing truly relevant and effective coaching means I remain deeply connected to the night shift experience. I actively immerse myself in the trucking industry, including through re-engagement with training programs (like Swift). This hands-on involvement ensures my strategies are always grounded in current realities, providing me with unparalleled insight that directly benefits my clients as I continue to build and expand Nightshift Strong. This commitment stems from my passion for the road and my desire to be close to the challenges my clients face daily, while also rebuilding the client base for my coaching business after a previous career transition.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed">
-                        My commitment extends beyond theory: I've been personally hired by a family to live with them and coach the husband in improving all aspects of his life – mental, physical, career, marriage, and anger management. This <strong>hands-on experience</strong> underscores my dedication to holistic, real-world transformation.
-                    </p>
-                </div>
-
             </div>
 
-            <div class="video-wrapper">
-                <!-- IMPORTANT: Replace "YOUR_VIDEO_ID" with your actual YouTube video ID. -->
-                <!-- Example: If your YouTube URL is https://www.youtube.com/watch?v=dQw4w9WgXcQ, the ID is dQw4w9WgXcQ -->
-                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Nightshift Strong Explainer Video"></iframe>
+            <!-- My Coaching Journey Card -->
+            <div class="w-full bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 text-left">
+                <h3 class="text-2xl font-bold text-white mb-4">My Coaching Journey & Expertise</h3>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    My background as an <span class="font-bold">addiction counselor at IOU University</span>, where I provided group coaching for thousands, has given me deep insights into behavior change and personal transformation. I've also had the privilege of coaching <span class="font-bold">many college students, middle-aged professional men and women</span> through significant life improvements.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    My coaching is grounded in advanced, science-backed principles, including those learned directly from <span class="font-bold">some of the world's leading sleep, stress, and burnout recovery doctors</span> through the Precision Nutrition program and other coaching programs, courses, and resources I have paid for to become the best in the business.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    My dedication to providing truly relevant and effective coaching means I remain deeply connected to the night shift experience. I actively immerse myself in the trucking industry, including through re-engagement with training programs (like Swift). This hands-on involvement ensures my strategies are always grounded in current realities, providing me with unparalleled insight that directly benefits my clients as I continue to build and expand Nightshift Strong. This commitment stems from my passion for the road and my desire to be close to the challenges my clients face daily, while also rebuilding the client base for my coaching business after a previous career transition.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    My commitment extends beyond theory: I've been personally hired by a family to live with them and coach the husband in improving all aspects of his life – mental, physical, career, marriage, and anger management. This <span class="font-bold">hands-on experience</span> underscores my dedication to holistic, real-world transformation.
+                </p>
             </div>
         </div>
     </section>
@@ -196,7 +210,6 @@
             </p>
 
             <!-- Calendly Link -->
-            <!-- IMPORTANT: Replace "YOUR_CALENDLY_LINK" with your actual Calendly booking link. -->
             <a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg md:text-xl mb-8">
                 <i class="fas fa-calendar-alt mr-3"></i>Book Your Free Intro Call
             </a>
@@ -206,9 +219,7 @@
             </p>
 
             <!-- Constant Contact Form Placeholder -->
-            <!-- IMPORTANT: Replace this entire <div> block with your actual Constant Contact form embed code. -->
-            <!-- The embed code will likely include its own <form> tags and JavaScript. -->
-            <div class="bg-gray-800 p-8 rounded-xl shadow-xl max-w-lg mx-auto border border-gray-700" id="constant-contact-form-embed-placeholder">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-xl max-w-lg mx-auto border border-gray-700">
                 <h3 class="text-2xl font-semibold text-white mb-6">Tell Me About Your Sleep Challenge</h3>
                 <form class="space-y-6">
                     <div>
@@ -242,6 +253,9 @@
                         Send My Challenge
                     </button>
                 </form>
+                <p class="text-sm text-gray-400 mt-4">
+                    *Note: This is a placeholder form. You will replace this with your actual Constant Contact form embed code.*
+                </p>
             </div>
         </div>
     </section>
@@ -258,21 +272,18 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Smooth scrolling for CTA button in hero (assuming it has a class like 'hero-cta-btn')
-        // If you add a class to your hero CTA, uncomment and update this:
-        /*
-        document.querySelector('.hero-cta-btn').addEventListener('click', function (e) {
+        // Smooth scrolling for CTA button
+        document.querySelector('.hero .btn').addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
-        */
 
-        // IMPORTANT: The form within the "constant-contact-form-embed-placeholder" div is a placeholder.
-        // You MUST replace the entire content of that div with the actual embed code provided by Constant Contact.
-        // Constant Contact's embed code will handle the form submission and data collection.
-        // The current <form> tag and its inputs are for visual representation only.
+        // IMPORTANT: Replace this entire <form> block with your Constant Contact embed code
+        // Once you get the Constant Contact embed code, it will likely include its own <form> tags
+        // and JavaScript. You will paste that code directly into the <div> with class "constant-contact-form-embed-placeholder"
+        // in the HTML above, replacing the placeholder form I've provided.
     </script>
 </body>
 </html>
