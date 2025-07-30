@@ -48,10 +48,12 @@
             height: 100%;
         }
         /* Logo styling */
-        .logo-svg {
+        .logo-img {
             width: 100px; /* Adjust size as needed */
             height: 100px; /* Adjust size as needed */
+            object-fit: contain; /* Ensures the image fits without distortion */
             filter: drop-shadow(0 4px 3px rgba(0,0,0,0.07)) drop-shadow(0 2px 2px rgba(0,0,0,0.06)); /* subtle shadow */
+            border-radius: 0.5rem; /* Optional: adds rounded corners to the image */
         }
     </style>
 </head>
@@ -60,34 +62,9 @@
     <!-- Hero Section -->
     <section class="hero-gradient text-white text-center py-20 md:py-28 px-6 shadow-xl">
         <div class="container mx-auto max-w-4xl">
-            <!-- Logo Placeholder (Replace with your actual SVG logo code) -->
+            <!-- Logo Image -->
             <div class="mb-6">
-                <svg class="logo-svg mx-auto" viewBox="0 0 250 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Truck Cab -->
-                    <rect x="20" y="40" width="80" height="50" rx="8" fill="#0F172A"/>
-                    <path d="M100 45L120 25L120 95L100 85V45Z" fill="#0F172A"/>
-                    <!-- Cab Window -->
-                    <rect x="45" y="50" width="35" height="25" rx="4" fill="#E0E6ED"/>
-
-                    <!-- Trailer (simplified) -->
-                    <rect x="120" y="45" width="100" height="40" rx="8" fill="#334155"/>
-
-                    <!-- Wheels -->
-                    <circle cx="50" cy="100" r="15" fill="#4B5563"/>
-                    <circle cx="90" cy="100" r="15" fill="#4B5563"/>
-                    <circle cx="140" cy="100" r="15" fill="#4B5563"/>
-                    <circle cx="180" cy="100" r="15" fill="#4B5563"/>
-                    <circle cx="210" cy="100" r="15" fill="#4B5563"/>
-
-                    <!-- Gas Pipes / Exhaust (simplified vertical lines) -->
-                    <rect x="105" y="30" width="5" height="30" fill="#4B5563" rx="2.5"/>
-                    <rect x="112" y="25" width="5" height="35" fill="#4B5563" rx="2.5"/>
-
-                    <!-- Zzz's coming from pipes -->
-                    <text x="100" y="25" font-family="Inter" font-size="18" fill="#FACC15" font-weight="bold">Z</text>
-                    <text x="110" y="18" font-family="Inter" font-size="18" fill="#FACC15" font-weight="bold">z</text>
-                    <text x="120" y="12" font-family="Inter" font-size="18" fill="#FACC15" font-weight="bold">z</text>
-                </svg>
+                <img src="https://placehold.co/100x100/0F172A/FACC15?text=Your+Logo" alt="Nightshift Strong Logo" class="logo-img mx-auto">
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
                 Nightshift Strong: Conquer Sleep, Burnout & Energy Crashes
@@ -153,10 +130,13 @@
                     My coaching is grounded in advanced, science-backed principles, including those learned directly from <span class="font-bold">some of the world's leading sleep, stress, and burnout recovery doctors</span> through the Precision Nutrition program and other coaching programs, courses, and resources I have paid for to become the best in the business.
                 </p>
                 <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                    My dedication to providing truly relevant and effective coaching means I remain deeply connected to the night shift experience. I actively immerse myself in the trucking industry, including through re-engagement with training programs (like Swift). This hands-on involvement ensures my strategies are always grounded in current realities, providing me with unparalleled insight that directly benefits my clients as I continue to build and expand Nightshift Strong. This commitment stems from my passion for the road and my desire to be close to the challenges my clients face daily, while also rebuilding the client base for my coaching business after a previous career transition.
+                    My dedication to providing truly relevant and effective coaching means I remain deeply connected to the night shift experience. I actively immerse myself in the trucking industry, including through re-engagement with training programs (like Swift). This hands-on involvement ensures my strategies are always grounded in current realities, providing me with unparalleled insight that directly benefits my clients as I continue to build and expand Nightshift Strong.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    My commitment extends beyond theory: I've been personally hired by a family to live with them and coach the husband in improving all aspects of his life – mental, physical, career, marriage, and anger management. This <span class="font-bold">hands-on experience</span> underscores my dedication to holistic, real-world transformation.
                 </p>
                 <p class="text-lg text-gray-300 leading-relaxed">
-                    My commitment extends beyond theory: I've been personally hired by a family to live with them and coach the husband in improving all aspects of his life – mental, physical, career, marriage, and anger management. This <span class="font-bold">hands-on experience</span> underscores my dedication to holistic, real-world transformation.
+                    Furthermore, my background as a <span class="font-bold">software engineer</span> and my experience <span class="font-bold">consulting with numerous startups</span> (including one acquired by Google) give me unique insight into the demands and pressures faced by business owners and founders, allowing me to tailor strategies that truly fit their high-stakes environments.
                 </p>
             </div>
         </div>
@@ -193,6 +173,10 @@
                 <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
                     <h3 class="text-xl font-bold mb-2 text-amber-400"><i class="fas fa-bullseye mr-2"></i>Goal Setting & Planning</h3>
                     <p class="text-gray-300">We help you clarify your goals and actually make progress — even with a demanding schedule.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-2 text-amber-400"><i class="fas fa-user-secret mr-2"></i>Confidentiality & Privacy</h3>
+                    <p class="text-gray-300">All sessions and personal information are treated with the utmost discretion and privacy. Your journey is yours alone.</p>
                 </div>
             </div>
         </div>
