@@ -1,126 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nightshift Strong</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #0e0e0e;
-      color: #f1f1f1;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #111827;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #facc15;
-      margin-bottom: 1rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #d1d5db;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 1.8rem;
-      color: #facc15;
-      margin-bottom: 1rem;
-    }
-    section p {
-      font-size: 1.05rem;
-      color: #e5e7eb;
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    form {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea, button {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    button {
-      background-color: #facc15;
-      color: #111827;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #eab308;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightshift Strong | Conquer Sleep, Burnout & Energy Crashes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0xaijjfFMhQp99m3bL/9zC07s+e+zL5b4eB1C5z/x7tD9lP6z0vF0y0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom styles for body and specific sections */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Darker text for readability */
+        }
+        /* Hero section background gradient */
+        .hero-gradient {
+            background: linear-gradient(to bottom right, #0F172A, #1E293B);
+        }
+        /* Section background colors */
+        .section-light {
+            background-color: #f1f5f9; /* Lighter gray */
+        }
+        .section-dark {
+            background-color: #0F172A; /* Dark blue/gray */
+            color: white;
+        }
+        /* Video wrapper for responsive embeds */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: 2.5rem; /* mt-10 */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Logo styling */
+        .logo-svg {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            filter: drop-shadow(0 4px 3px rgba(0,0,0,0.07)) drop-shadow(0 2px 2px rgba(0,0,0,0.06)); /* subtle shadow */
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Nightshift Strong</h1>
-    <p>Coaching Built by and for Night Shift Workers — Real, Practical, and Proven</p>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m a certified addiction counselor and former life coach for professionals at a university. I’ve run a sober companionship business and helped individuals overcome addiction and burnout. I’ve driven trucks myself, so I know firsthand the stress, exhaustion, and mental toll it can take. I studied recovery, sleep, and stress with some of the top doctors and experts. And I’ve helped families, students, and professionals rediscover their strength and purpose. My mission is to help night shift workers become the strongest, healthiest version of themselves — physically, emotionally, spiritually, and mentally.</p>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white text-center py-20 md:py-28 px-6 shadow-xl">
+        <div class="container mx-auto max-w-4xl">
+            <!-- Logo -->
+            <div class="mb-6">
+                <svg class="logo-svg mx-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="40" width="60" height="30" rx="5" fill="#FACC15"/>
+                    <path d="M75 45L85 30L85 70L75 65V45Z" fill="#FACC15"/>
+                    <rect x="25" y="70" width="15" height="15" rx="7.5" fill="#4B5563"/>
+                    <rect x="55" y="70" width="15" height="15" rx="7.5" fill="#4B5563"/>
+                    <path d="M30 40L30 20L50 20L50 40L30 40Z" fill="#4B5563"/>
+                    <path d="M50 20L60 20L60 40L50 40L50 20Z" fill="#4B5563"/>
+                    <path d="M40 10C40 7.23858 42.2386 5 45 5H55C57.7614 5 60 7.23858 60 10V20H40V10Z" fill="#4B5563"/>
+                    <text x="35" y="30" font-family="Inter" font-size="10" fill="white" font-weight="bold">Zzz</text>
+                    <text x="65" y="30" font-family="Inter" font-size="10" fill="white" font-weight="bold">Zzz</text>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Nightshift Strong: Conquer Sleep, Burnout & Energy Crashes
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Dedicated 1-on-1 coaching for truck drivers and other night shift professionals to reclaim natural energy, deep sleep, and lasting focus.
+            </p>
+            <a href="#cta" class="inline-block bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg md:text-xl">
+                Start Your Transformation
+            </a>
+        </div>
+    </section>
 
-  <!-- Video Section -->
-  <section class="video-section">
-    <h2>Watch My Story</h2>
-    <p>Learn how Nightshift Strong was built from real experience — and how it can help you today.</p>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Nightshift Strong Story" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+    <!-- Wave Divider -->
+    <div class="w-full h-16 bg-gradient-to-t from-gray-100 to-transparent -mt-8 relative z-10"></div>
 
-  <section>
-    <h2>Common Objections</h2>
-    <p>"Will this really help someone like me?" — Yes. Everything I do is not only evidence-based, but tested in real life. I’ve worked in trucking. I’ve been through burnout. I’ve been the one people call when things fall apart. This works because it’s built on real experience.</p>
-    <p>"What if I’m too far gone?" — No one is. I’ve helped people recover, get strong, and live again — from working men dealing with addiction to professionals balancing family and stress.</p>
-  </section>
+    <!-- What You're Facing Section -->
+    <section class="section-light py-16 px-6 md:px-10">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">The Night Shift Challenge: You're Not Alone</h2>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                Most night shift workers, especially truckers, nurses, and security staff, never get real, sustainable help for the unique challenges they face. You're constantly battling fatigue, struggling to sleep during the day, relying on endless caffeine, and feeling disconnected. You're tired, wired, and frustrated – and it impacts everything from your safety on the road to your relationships at home.
+            </p>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                I've been there too. I understand the silent struggle of the night shift because I've lived it. And I've coached thousands through recovery, performance, and lifestyle resets that actually work for *your* schedule.
+            </p>
+        </div>
+    </section>
 
-  <section>
-    <h2>Real Impact</h2>
-    <p>I’ve led group and one-on-one coaching programs that have reached over 3,000 people — including lectures on recovery and hands-on guidance. Families have hired me to move in and help a loved one overcome addiction, rebuild their mindset, and strengthen their faith. I’ve worked one-on-one with university students and now focus on night shift workers and truckers looking for real transformation.</p>
-  </section>
+    <!-- Wave Divider -->
+    <div class="w-full h-16 bg-gradient-to-t from-gray-900 to-transparent -mt-8 relative z-10"></div>
 
-  <section>
-    <h2>Call to Action</h2>
-    <p>If you’re ready to stop surviving and start thriving, reach out below. We’ll work on every area of your life: physical, mental, emotional, spiritual, social, and environmental. After Nightshift Strong, you won’t just handle stress — you’ll become the strongest version of yourself.</p>
-    <form action="https://your.constantcontact.com/form-url" method="post">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="4" placeholder="Tell me a bit about you..." required></textarea>
-      <button type="submit">Work With Me</button>
-    </form>
-    <p>Prefer to talk? Call or text me directly: <strong>(555) 123-4567</strong></p>
-  </section>
+    <!-- My Story Section -->
+    <section class="section-dark py-16 px-6 md:px-10">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-8">My Wake-Up Call: Why I Coach Night Shift Strong</h2>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                Years ago, I was a new CDL driver, just like many of you. The relentless night shifts, the constant fatigue – it all caught up to me. One night, while driving a truck, I experienced a micro-sleep. I was seconds away from a catastrophic disaster. Out of nowhere, another trucker honked and flashed their lights, jolting me awake. Nothing happened that night, but it was a terrifying reminder of how dangerous sleep deprivation can be, not just for us, but for everyone on the road.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                That moment changed everything. It ignited my passion to help others avoid what I almost faced. My background as an addiction counselor at IOU University, where I provided group coaching for thousands and one-on-one sessions for over 15 clients, has given me deep insights into behavior change and personal transformation. While I'm currently expanding my expertise in sleep, stress, and recovery coaching through the Precision Nutrition program, my foundation in guiding individuals through profound life improvements is extensive.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                I'm even rejoining a trucker training program (like Swift) to stay immersed in the daily realities of night shift work, ensuring my coaching remains relevant and grounded. My commitment extends beyond theory: I've been personally hired by a family to live with them and coach the husband in improving all aspects of his life – mental, physical, career, marriage, and anger management. This hands-on experience underscores my dedication to holistic, real-world transformation. My mission is to ensure no one else faces the dangers of night shift fatigue, and that every night shift worker can live a full, healthy, and strong life.
+            </p>
+            <div class="video-wrapper">
+                <!-- Replace YOUR_VIDEO_ID with your actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
+    <!-- Wave Divider -->
+    <div class="w-full h-16 bg-gradient-to-t from-gray-100 to-transparent -mt-8 relative z-10"></div>
+
+    <!-- What You'll Get Section -->
+    <section class="section-light py-16 px-6 md:px-10">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Your Path to Nightshift Strong</h2>
+            <ul class="text-lg md:text-xl text-gray-700 space-y-4 list-none p-0">
+                <li class="flex items-start justify-center md:justify-start space-x-3">
+                    <i class="fas fa-check-circle text-green-600 text-2xl mt-1"></i>
+                    <p><strong class="font-semibold text-gray-900">Personalized 1-on-1 Sessions:</strong> Coaching tailored specifically to your unique sleep patterns, recovery needs, and shift schedule.</p>
+                </li>
+                <li class="flex items-start justify-center md:justify-start space-x-3">
+                    <i class="fas fa-tools text-blue-600 text-2xl mt-1"></i>
+                    <p><strong class="font-semibold text-gray-900">Practical Tools & Strategies:</strong> Learn how to naturally break free from caffeine dependence and manage energy crashes effectively.</p>
+                </li>
+                <li class="flex items-start justify-center md:justify-start space-x-3">
+                    <i class="fas fa-truck text-amber-600 text-2xl mt-1"></i>
+                    <p><strong class="font-semibold text-gray-900">Real-World Solutions:</strong> Strategies proven to work for the toughest night shift roles – truckers, nurses, security staff, and more.</p>
+                </li>
+                <li class="flex items-start justify-center md:justify-start space-x-3">
+                    <i class="fas fa-users text-purple-600 text-2xl mt-1"></i>
+                    <p><strong class="font-semibold text-gray-900">Optional Community Support:</strong> Access to group coaching and a supportive community for shared experiences and accountability.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="w-full h-16 bg-gradient-to-t from-gray-900 to-transparent -mt-8 relative z-10"></div>
+
+    <!-- Call to Action Section -->
+    <section class="section-dark py-16 px-6 md:px-10" id="cta">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-8">Ready to Reclaim Your Energy & Life?</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Take the first step towards better sleep, sustained energy, and a healthier night shift lifestyle. Book a free introductory call to discuss your unique challenges and how Nightshift Strong can help.
+            </p>
+
+            <!-- Calendly Link -->
+            <a href="https://calendly.com/YOUR_CALENDLY_LINK" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg md:text-xl mb-8">
+                <i class="fas fa-calendar-alt mr-3"></i>Book Your Free Intro Call
+            </a>
+
+            <p class="text-lg md:text-xl text-gray-300 mb-6">
+                Alternatively, fill out the form below to tell me about your biggest sleep issue and get more information.
+            </p>
+
+            <!-- Constant Contact Form Placeholder -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-xl max-w-lg mx-auto border border-gray-700">
+                <h3 class="text-2xl font-semibold text-white mb-6">Tell Me About Your Sleep Challenge</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-lg font-medium text-gray-200 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-lg font-medium text-gray-200 mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white" placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-left text-lg font-medium text-gray-200 mb-2">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white" placeholder="(555) 123-4567">
+                    </div>
+                    <div>
+                        <label for="work_type" class="block text-left text-lg font-medium text-gray-200 mb-2">Type of Night Shift Work</label>
+                        <select id="work_type" name="work_type" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white" required>
+                            <option value="" disabled selected>Select your profession</option>
+                            <option value="truck_driver">Truck Driver</option>
+                            <option value="nurse">Nurse</option>
+                            <option value="security_guard">Security Guard</option>
+                            <option value="factory_worker">Factory Worker</option>
+                            <option value="other">Other Night Shift Work</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sleep_issue" class="block text-left text-lg font-medium text-gray-200 mb-2">What's your biggest sleep or energy issue?</label>
+                        <textarea id="sleep_issue" name="sleep_issue" rows="4" class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white" placeholder="e.g., Can't fall asleep, constantly tired, relying on caffeine, etc." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg">
+                        Send My Challenge
+                    </button>
+                </form>
+                <p class="text-sm text-gray-400 mt-4">
+                    *Note: This is a placeholder form. You will replace this with your actual Constant Contact form embed code.*
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-8 px-6 md:px-10 text-center">
+        <div class="container mx-auto">
+            <p class="mb-2 text-lg">&copy; <span id="current-year"></span> Nightshift Strong. All rights reserved.</p>
+            <p class="text-sm">Empowering Night Shift Workers for a Healthier Life.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for CTA button
+        document.querySelector('.hero .btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // IMPORTANT: Replace this entire <form> block with your Constant Contact embed code
+        // Once you get the Constant Contact embed code, it will likely include its own <form> tags
+        // and JavaScript. You will paste that code directly into the <div> with class "constant-contact-form-embed-placeholder"
+        // in the HTML above, replacing the placeholder form I've provided.
+    </script>
 </body>
 </html>
